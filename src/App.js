@@ -1,6 +1,6 @@
 import React from 'react';
-import './App.css';
-import {BrowserRouter, Route, Router, Switch} from "react-router-dom";
+import './App.sass';
+import {BrowserRouter, Route, Switch} from "react-router-dom";
 import AdminPanel from "./Pages/AdminPanel/AdminPanel";
 import AdminNavigation from "./Components/AdminNavigation/AdminNavigation";
 

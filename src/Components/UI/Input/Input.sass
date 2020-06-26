@@ -1,0 +1,38 @@
+@import "../../../App"
+
+.defaultInput
+  color: $accentColor
+  text-transform: capitalize
+  outline: none
+  width: 450px
+  background-color: transparent
+  padding: 10px 0
+  font-size: 20px
+  transition: .3s
+  border: 0
+  border-bottom: 1px solid $basicTextColor
+  &::placeholder
+    padding-left: 5px
+
+.defaultInputLabel
+  display: flex
+  flex-direction: column
+  color: $basicTextColor
+  text-transform: capitalize
+
+.changeColorPlaceholderLabel
+  padding: 0
+
+.file
+  margin: 15px 0 10px 0
+  padding: 4px 0 4px 3px
+  border: 2px solid #171731
+  background-color: rgba(21, 21, 52, 0.91)
+  color: rgba(223, 223, 223, 0.73)
+
+.changeColorPlaceholder
+  border-bottom: 1px solid $accentColor
+  transition: .3s
+  &::placeholder
+    color: $accentColor
+

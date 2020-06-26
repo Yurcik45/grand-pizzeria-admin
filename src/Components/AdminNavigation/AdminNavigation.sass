@@ -1,9 +1,11 @@
+@import "src/App"
+
 .AdminNavigation
   display: flex
   align-items: center
   justify-content: left
   text-align: left
-  background-color: #1C1D33
+  background-color: $mainDarkPurpleColor
   width: 250px
   ul
     width: 100%
@@ -13,8 +15,8 @@
   font-weight: 300
   font-size: 30px
   cursor: default
-  padding: 15 px 0
-  color: rgba(223, 223, 223, 0.73)
+  padding: 25px 0 10px 0
+  color: $accentColor
 
 .NavigationValues
   list-style: none
@@ -22,25 +24,21 @@
   text-transform: none
   width: 100%
   .currentLink
-    background-color: #131329
-    color: #bababa
+    background-color: $accentBackgroundColor
+    color: $accentColor
     svg
-      path
-        fill: #bababa
+      fill: $accentColor
   svg
     width: 20px
-    fill: #67687A
+    fill: $basicTextColor
     padding: 0 10px
     margin-right: 5px
   a
     text-decoration: none
-    color: #67687A
+    color: $basicTextColor
     display: flex
     align-items: center
     width: 100%
     padding: 10px 0
     &:hover
-      background-color: #131329
-
-
-
+      background-color: $accentBackgroundColor

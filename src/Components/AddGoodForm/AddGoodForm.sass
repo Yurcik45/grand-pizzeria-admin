@@ -1,0 +1,55 @@
+@import 'src/App'
+
+.addGoodFormContainer
+  display: flex
+  flex-direction: column
+  align-items: center
+  margin: 0 300px
+  padding: 20px 0 0 0
+  width: 600px
+  .dzu-dropzone
+    overflow: inherit
+    margin-top: 20px
+    width: 450px
+    border: 1px solid $accentColor
+    &:hover
+      background-color: $mainDarkPurpleColor
+  .dzu-inputLabelWithFiles
+    margin: 10px
+    color: $mainDarkPurpleColor
+    background-color: $accentColor
+
+    transition: .3s
+    &:hover
+      background-color: $contrastColor
+      color: $accentBackgroundColor
+  .dzu-inputLabel
+    margin: 0
+    color: $accentColor
+
+.descriptionInput
+  min-width: 450px
+  max-width: 450px
+  min-height: 120px
+  max-height: 120px
+  margin-top: 20px
+  outline: none
+  border: 1px solid $accentColor
+  background-color: transparent
+  border-radius: 5px
+  font-size: 20px
+  color: $accentColor
+  &::placeholder
+    font-size: 20px
+    color: $basicTextColor
+    padding-left: 5px
+
+
+.addGoodInputsForm
+  display: flex
+  flex-direction: column
+  align-items: center
+  width: 500px
+  label
+    margin-top: 10px
+
