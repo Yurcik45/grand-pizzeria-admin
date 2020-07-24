@@ -1,32 +1,29 @@
 import React, {useState} from 'react';
 import './AddGoodForm.sass'
-import Input from '../UI/Input/Input'
-import Button from "../Button/Button";
+import Button from "../UI/Button/Button";
 import Dropzone from 'react-dropzone-uploader'
 import 'react-dropzone-uploader/dist/styles.css'
+import Input from "../UI/Input/Input";
 
 
 const AddGoodForm = () => {
-
     const [focusElement, focusElementHandler] = useState(null);
-    // const [showPassword, showPasswordHandler] = useState(false);
-    //
     const dataInputs = [
         {
-            name: 'name',
-            className: `${focusElement === 'name' ? 'defaultInput changeColorPlaceholder' : 'defaultInput'}`, // Якшо в фокусі login то дай йому стилі defaultInput та changeColorPlaceholder або якщо не в фокусі дай йому стиль defaultInput
+            name: 'Name',
+            className: `${focusElement === 'Name' ? 'defaultInput changeColorPlaceholder' : 'defaultInput'}`, // Якшо в фокусі login то дай йому стилі AddGoodFormInput та changeColorPlaceholder або якщо не в фокусі дай йому стиль AddGoodFormInput
             type: 'text',
             placeholder: 'Name of good',
         },
         {
-            name: 'category',   // При події onClick поміняй значення showPassword
-            className: `${focusElement === 'category' ? 'defaultInput changeColorPlaceholder' : 'defaultInput'}`,
+            name: 'Category',   // При події onClick поміняй значення showPassword
+            className: `${focusElement === 'Category' ? 'defaultInput changeColorPlaceholder' : 'defaultInput'}`,
             type: 'text',
             placeholder: 'Category',
         },
         {
-            name: 'price',   // При події onClick поміняй значення showPassword
-            className: `${focusElement === 'price' ? 'defaultInput changeColorPlaceholder' : 'defaultInput'}`,
+            name: 'Price',   // При події onClick поміняй значення showPassword
+            className: `${focusElement === 'Price' ? 'defaultInput changeColorPlaceholder' : 'defaultInput'}`,
             type: 'text',
             placeholder: 'Price',
         }
@@ -36,7 +33,6 @@ const AddGoodForm = () => {
     const getInputsData = (value, label) => {
         changeElement[label] = value.target.value
     };
-
 
     // specify upload params and url for your files
     const getUploadParams = ({ meta }) => { return { url: 'https://httpbin.org/post' } }
@@ -50,24 +46,24 @@ const AddGoodForm = () => {
         allFiles.forEach(f => f.remove())
     }
 
-
     return (
-        <div className={'addGoodFormContainer'}>
-            <form className={'addGoodInputsForm'}>
+            <form className={'AddGoodForm'}>
                 <legend className={'NavigationTopic'}>Add Good</legend>
                 {
                     dataInputs.map((input, index) => {
                         return (
+                            <label className={`AddGoodFormLabel`}>
+                                {input.name}
                             <Input
                                 name={input.name}
-                                class={input.className}
+                                className={input.className}
                                 key={index}
                                 type={input.type}
-                                placeHolder={input.placeholder}
-                                onChange={(value, label) => getInputsData(value, label)}
+                                placeholder={input.placeholder}
                                 onFocus={(value) => focusElementHandler(value)}
                                 onBlur={(value) => focusElementHandler(value)}
                             />
+                            </label>
                         )
                     })
                 }
@@ -85,7 +81,6 @@ const AddGoodForm = () => {
                     value={'Submit'}
                 />
             </form>
-        </div>
     );
 };
 

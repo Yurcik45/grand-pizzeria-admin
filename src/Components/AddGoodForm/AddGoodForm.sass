@@ -1,10 +1,11 @@
 @import 'src/App'
 
-.addGoodFormContainer
+.AddGoodForm
+  margin: 0 auto
   display: flex
   flex-direction: column
   align-items: center
-  margin: 0 300px
+  //margin: 0 300px
   padding: 20px 0 0 0
   width: 600px
   .dzu-dropzone
@@ -18,7 +19,6 @@
     margin: 10px
     color: $mainDarkPurpleColor
     background-color: $accentColor
-
     transition: .3s
     &:hover
       background-color: $contrastColor
@@ -44,12 +44,14 @@
     color: $basicTextColor
     padding-left: 5px
 
-
-.addGoodInputsForm
+.AddGoodFormLabel
+  margin: 5px auto
   display: flex
   flex-direction: column
-  align-items: center
-  width: 500px
-  label
-    margin-top: 10px
+  width: 80%
+  color: $accentColor
+  &:hover
+    transition: .3s
+    padding: 2px 0
+
 

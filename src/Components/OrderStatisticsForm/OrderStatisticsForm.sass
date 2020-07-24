@@ -1,0 +1,35 @@
+.classBefore
+  position: fixed
+  top: 50%
+  left: 50%
+  transform: translate(-50%, -50%) scale(0)
+  transition: 1s
+  display: flex
+  flex-direction: column
+  padding: 20px 0
+  background-color: cornflowerblue
+  border: 1px solid fuchsia
+  z-index: 2
+.titleModal
+  display: flex
+  justify-content: space-between
+  border-bottom: 2px solid black
+
+.classAfter
+  transition: 1s
+  transform: translate(-50%,-50%) scale(1)
+
+.opacityDiv
+  position: fixed
+  top: 0
+  bottom: 0
+  left: 0
+  right: 0
+  background-color: rgb(82, 82, 82)
+  opacity: 0
+  pointer-events: none
+  z-index: 1
+.opacityDivAfter
+  transition: 2s ease-in-out
+  opacity: .5
+  pointer-events: all

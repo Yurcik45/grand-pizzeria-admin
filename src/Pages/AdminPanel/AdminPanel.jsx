@@ -13,15 +13,14 @@ import ShowFeedBackForm from "../../Components/ShowFeedBackForm/ShowFeedBackForm
 import OrderStatisticsForm from "../../Components/OrderStatisticsForm/OrderStatisticsForm";
 import SocialLinksForm from "../../Components/SocialLinksForm/SocialLinksForm";
 
-const AdminPanel = () => {
+const AdminPanel = props => {
     return (
         <div className="MainAdminPanel">
-            {/*<h1>ADMIN PANEL PAGE</h1>*/}
-                {
-                    window.location.pathname !== '/AdminPanel/AdminAuth'
-                        ? <AdminNavigation/>
-                        : null
-                }
+            {
+                window.location.pathname !== '/AdminPanel/AdminAuth'
+                    ? <AdminNavigation/>
+                    : null
+            }
             <Route exect path='/AdminPanel/AdminAuth'>
                 <AdminAuth/>
             </Route>
@@ -31,7 +30,10 @@ const AdminPanel = () => {
                 <AddGoodForm/>
             </Route>
             <Route exect path='/AdminPanel/AddTelegramUser'>
-                <AddTelegramUserForm/>
+                <AddTelegramUserForm
+                    DBSetter={(path, value) => props.DBSetter(path, value)}
+                    data={props.data}
+                />
             </Route>
             <Route exect path='/AdminPanel/ShowGoods'>
                 <ShowGoodsForm/>

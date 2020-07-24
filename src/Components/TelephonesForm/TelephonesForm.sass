@@ -1,0 +1,64 @@
+@import "src/App"
+//µ
+.TelephonesForm
+  width: 1100px
+  margin: 0 auto
+  color: white
+.telephonesTable
+  margin: 20px auto
+  text-align: center
+
+.telephonesTableHeader
+  display: flex
+  margin: 0 auto
+.DivHeader
+  padding: 5px 0 5px 10px
+  width: calc(100% / 2)
+  outline: 1px solid $contrastColor
+.telephonesTableBody
+  display: flex
+  margin: 0 auto
+.DivBody
+  padding: 5px 0 5px 10px
+  width: calc(100% / 2)
+  outline: 1px solid $contrastColor
+
+
+.delDiv
+  padding-top: 10px
+  height: 30px
+  text-align: center
+  width: 50px
+  outline: 1px solid $contrastColor
+.delButtonDiv
+  background-color: $mainDarkPurpleColor
+  min-height: 35px
+  width: 50px
+  outline: 1px solid #ffffff
+  text-align: center
+  button
+    background-color: transparent
+    cursor: pointer
+    border: none
+    outline: none
+    width: 100%
+    height: 100%
+    &:hover
+      cursor: pointer
+      background-color: $basicTextColor
+  svg
+    &:hover
+      width: 25px
+      height: 25px
+
+
+.submitForm
+  margin-top: 40px
+  display: flex
+  flex-direction: column
+  width: 550px
+  margin: 0 auto
+
+.TelephonesFormInput
+  width: 400px
+  height: 30px
