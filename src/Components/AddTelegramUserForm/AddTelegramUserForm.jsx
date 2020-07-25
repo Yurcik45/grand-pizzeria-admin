@@ -12,18 +12,23 @@ const AddTelegramUserForm = props => {
     const addChatIdHandler = () => {
         let newChatId = getInputValue
         let currentIDs = props.data?.chatIDs ? props.data.chatIDs : []
-        currentIDs.push(newChatId)
+        currentIDs.unshift(newChatId)
         props.DBSetter('/chatIDs', currentIDs)
+
     }
+
+
     const changeUserId = e => {
         e.preventDefault();
         getInputValue[e.target.name] = e.target.value;
     };
+
     const submitFormHandler = e => {
         e.preventDefault();
         addChatIdHandler()
         e.target.reset();
     }
+
     const clickDeleteButton = el => {
         // let currentData = props.data
         // let currentElement = el
@@ -35,7 +40,9 @@ const AddTelegramUserForm = props => {
             }
         })
         props.DBSetter('/chatIDs', newData)
+        console.log(el.name)
     }
+
     return (
         <form className={'AddTelegramUserForm'}
             onSubmit={(e) => submitFormHandler(e)}
@@ -58,6 +65,7 @@ const AddTelegramUserForm = props => {
                         />
                     )
                 }) : null
+
             }
             <div
                 className={isModalOpen ? 'opacityAll opacityAllActive' : 'opacityAll'}

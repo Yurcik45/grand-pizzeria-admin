@@ -6,8 +6,6 @@ import AdminNavigation from "./Components/AdminNavigation/AdminNavigation";
 import firebase from "firebase";
 
 function App() {
-
-
     const [data, dataHandler] = useState(0)
     const [dbRefresh, dbRefreshHandler] = useState(0)
 
@@ -28,14 +26,14 @@ function App() {
             .then(r => dbRefreshHandler(Math.random()));
     };
 
-    const testDB = () => {
-        let currentData = data.newValues
-        let newObject = {
-            test : '1'
-        }
-        currentData.push(newObject)
-        DBSetter('/newValues', currentData)
-    }
+    // const testDB = () => {
+    //     let currentData = data.newValues
+    //     let newObject = {
+    //         test : '1'
+    //     }
+    //     currentData.push(newObject)
+    //     DBSetter('/newValues', currentData)
+    // }
 
 
     return (

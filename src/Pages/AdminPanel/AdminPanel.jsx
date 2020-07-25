@@ -27,7 +27,10 @@ const AdminPanel = props => {
 
 
             <Route exect path='/AdminPanel/AddGood'>
-                <AddGoodForm/>
+                <AddGoodForm
+                    DBSetter={(path, value) => props.DBSetter(path, value)}
+                    data={props.data}
+                />
             </Route>
             <Route exect path='/AdminPanel/AddTelegramUser'>
                 <AddTelegramUserForm
@@ -36,7 +39,10 @@ const AdminPanel = props => {
                 />
             </Route>
             <Route exect path='/AdminPanel/ShowGoods'>
-                <ShowGoodsForm/>
+                <ShowGoodsForm
+                    DBSetter={(path, value) => props.DBSetter(path, value)}
+                    data={props.data}
+                />
             </Route>
             <Route exect path='/AdminPanel/ShowFeedBack'>
                 <ShowFeedBackForm/>
