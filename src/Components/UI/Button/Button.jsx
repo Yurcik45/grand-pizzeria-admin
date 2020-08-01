@@ -3,7 +3,7 @@ import './Button.sass'
 
 const Button = props => {
     return (
-        <button className={props.className}
+        <button className={props.className ? props.className : 'defaultBtn'}
                 type={props?.type}
                 onClick={props?.onClick}
         >

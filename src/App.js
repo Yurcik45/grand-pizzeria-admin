@@ -4,6 +4,7 @@ import {BrowserRouter, Route, Switch} from "react-router-dom";
 import AdminPanel from "./Pages/AdminPanel/AdminPanel";
 import AdminNavigation from "./Components/AdminNavigation/AdminNavigation";
 import firebase from "firebase";
+import HomePage from "./Components/HomePage/HomePage";
 
 function App() {
     const [data, dataHandler] = useState(0)
@@ -46,9 +47,11 @@ function App() {
             <BrowserRouter>
                 <Switch>
                     <Route exact path="/">
+                        <HomePage/>
                     </Route>
                     <Route path="/AdminPanel">
                         <AdminPanel
+                            dbRefreshHandler={dbRefreshHandler}
                             DBSetter={(path, value) => DBSetter(path, value)}
                             data={data}
                         />

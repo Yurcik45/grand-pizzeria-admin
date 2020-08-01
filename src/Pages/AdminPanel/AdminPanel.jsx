@@ -28,6 +28,7 @@ const AdminPanel = props => {
 
             <Route exect path='/AdminPanel/AddGood'>
                 <AddGoodForm
+                    dbRefreshHandler={(value) => props.dbRefreshHandler(value)}
                     DBSetter={(path, value) => props.DBSetter(path, value)}
                     data={props.data}
                 />
