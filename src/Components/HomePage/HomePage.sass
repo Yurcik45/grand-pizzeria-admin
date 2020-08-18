@@ -5,74 +5,16 @@ a
   text-decoration: none
 
 .HomePage
-  background-image: url('../../IMG/backgroundMAIN.jpeg')
+  background-image: url('../../IMG/mainBackground.png')
   background-size: contain
   position: absolute
   width: 100%
-.header
-  display: flex
-  width: calc(100% - 30px)
-  left: 0
-  top: 0
-  padding: 0 30px
-  height: 80px
-  justify-content: space-between
-  align-items: center
-  position: fixed
-  color: white
-  background: rgba(9, 9, 9, 0.89)
-  z-index: 10
-
-.leftContent
-  display: flex
-  width: 350px
-  justify-content: space-between
-  align-items: center
-  align-content: center
-  svg
-    width: 55px
-    height: 55px
-  .choiceLang
-    display: flex
-    flex-direction: row
-    align-items: center
-    p
-      color: white
-    .currentLang
-      font-size: 22px
-    .changeLang
-      font-size: 14px
-    svg
-      margin: 0 10px
-      width: 15px
-      height: 15px
-.mainLink
-  display: flex
-  flex-direction: row
-  align-items: center
-  p
-    margin-left: 15px
-    font-size: 18px
-    font-weight: bolder
-.basket
-  display: flex
-  flex-direction: column
-  .uppPlate
-    margin: 0 0 10px 10px
-.rightContent
-  display: flex
-  width: 500px
-  justify-content: space-evenly
-  align-items: center
-  font-size: 20px
-  padding-left: 10px
-  a
-    color: #67687a
-  a:hover
-    transition: .4s
-    color: white
-
-
+.a
+  background-image: url('../../IMG/mainBackground1.png')
+.b
+  background-image: url('../../IMG/mainBackground2.png')
+.c
+  background-image: url('../../IMG/mainBackground3.png')
 .contacts
   max-width: calc(100% - 30px)
   display: flex
@@ -132,17 +74,17 @@ a
     color: black
 .scrollItem
   width: 100%
-  display: inline-flex
+  display: flex
+  align-items: center
   background: white
-  height: 550px
   .photo
     img
-      height: 550px
+      width: 100%
 .slick-track, .slick-list
-  max-height: 550px
+  height: auto
   width: 100%
 .scrollItemText
-  max-height: 550px
+  height: auto
   padding: 60px 10px 0 10px
   text-align: center
   width: 100%
@@ -154,6 +96,11 @@ a
   p
     padding: 50px 0
     font-size: 20px
+
+.customDots
+  display: flex !important
+  justify-content: center
+  align-items: center
 
 
 .location
@@ -259,3 +206,13 @@ footer
 
 .slider
   max-width: 100%
+
+.scrollDown
+  margin-top: 200px
+  text-align: center
+.scrollUpp
+  transition: 5s
+  z-index: 99
+  position: fixed
+  top: 80%
+  right: 25px

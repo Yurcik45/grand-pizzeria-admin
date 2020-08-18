@@ -1,6 +1,5 @@
 import React from 'react';
 import './ShowGoodsTable.sass'
-import Input from "../UI/Input/Input";
 
 const ShowGoodsTable = props => {
     return (

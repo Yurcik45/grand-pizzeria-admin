@@ -2,7 +2,6 @@ import React from 'react';
 import './ShowGoodsModal.sass'
 import Input from "../UI/Input/Input";
 import Button from "../UI/Button/Button";
-// import Dropzone from "react-dropzone-uploader/dist/Dropzone";
 
 const ShowGoodsModal = props => {
     return (

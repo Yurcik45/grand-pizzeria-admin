@@ -1,0 +1,72 @@
+@import "src/App"
+
+img
+  max-width: 100%
+  position: static
+.topBlock
+  background: rgba(9, 9, 9, 0.89)
+  position: sticky
+  top: 79px
+  padding: 5px
+  margin-bottom: 5px
+  margin-top: -3px
+.categories
+  color: white
+  height: 40px
+  ul
+    display: flex
+    list-style: none
+    align-items: center
+    justify-content: space-evenly
+    cursor: pointer
+    font-size: 30px
+  li:hover
+    color: $pauseBlockColor
+.search
+  display: flex
+  flex-direction: row
+  .searchInput
+    height: 30px
+    width: 6%
+    color: white
+    border: none
+    margin: 0 0 0 20px
+    //padding: 0
+  svg
+    cursor: pointer
+    height: 30px
+    width: 17px
+    margin: 0
+    padding: 0
+
+.itemContainer
+  display: flex
+  justify-content: space-evenly
+  flex-wrap: wrap
+.items
+  display: flex
+  flex-direction: column
+  //justify-content: flex-start
+  align-items: center
+  max-width: 300px
+  max-height: 400px
+  border: 1px solid black
+  margin: 10px
+  img
+    margin: 10px
+    width: 60%
+.itemsText
+  min-height: 100px
+  max-height: 200px
+  h2
+    margin-bottom: 10px
+  h2 , p
+    text-align: center
+  .cost
+    display: flex
+    flex-direction: row
+    align-items: center
+    padding: 0 50px
+    .addToCardBtn , button
+      width: 100px
+      margin: 10px 30px

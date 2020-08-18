@@ -5,6 +5,10 @@ import AdminPanel from "./Pages/AdminPanel/AdminPanel";
 import AdminNavigation from "./Components/AdminNavigation/AdminNavigation";
 import firebase from "firebase";
 import HomePage from "./Components/HomePage/HomePage";
+import StartPage from "./Components/StartPage/StartPage";
+import MenuItems from "./Components/MenuItems/MenuItems";
+import FeedBack from "./Components/FeedBack/FeedBack";
+import FoundUs from "./Components/FoundUs/FoundUs";
 
 function App() {
     const [data, dataHandler] = useState(0)
@@ -35,7 +39,7 @@ function App() {
     //     currentData.push(newObject)
     //     DBSetter('/newValues', currentData)
     // }
-
+    console.log(window.location.pathname)
 
     return (
         <div className="App">
@@ -55,6 +59,17 @@ function App() {
                             DBSetter={(path, value) => DBSetter(path, value)}
                             data={data}
                         />
+                    </Route>
+                    <Route path="/MenuItems">
+                        <MenuItems
+                            data={data}
+                        />
+                    </Route>
+                    <Route path="/FeedBack">
+                        <FeedBack/>
+                    </Route>
+                    <Route path="/FoundUs">
+                        <FoundUs/>
                     </Route>
                 </Switch>
             </BrowserRouter>
