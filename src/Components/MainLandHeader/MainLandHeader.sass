@@ -1,11 +1,10 @@
 @import "src/App"
 
 a
-  color: white
   text-decoration: none
 .header
   display: flex
-  width: calc(100% - 30px)
+  width: calc(100% - 60px)
   left: 0
   top: 0
   padding: 0 30px
@@ -19,51 +18,140 @@ a
 
 .leftContent
   display: flex
-  width: 350px
+  width: 330px
   justify-content: space-between
   align-items: center
   align-content: center
+.logoLink
+  display: flex
+  flex-direction: row
+  align-items: center
+  height: 55px
   svg
     width: 55px
     height: 55px
-  .choiceLang
-    display: flex
-    flex-direction: row
-    align-items: center
+  p
+    margin: 0 15px
+    font-size: 18px
+    font-weight: bolder
+    color: white
+
+.choiceLang
+  display: flex
+  flex-direction: row
+  justify-content: space-between
+  width: 70px
+  align-items: center
+  cursor: pointer
+  .currentLang
+    font-size: 22px
+  .changeLang
+    font-size: 14px
     p
       color: white
-    .currentLang
-      font-size: 22px
-    .changeLang
-      font-size: 14px
     svg
       margin: 0 10px
       width: 15px
       height: 15px
-.mainLink
-  display: flex
-  flex-direction: row
-  align-items: center
-  p
-    margin-left: 15px
-    font-size: 18px
-    font-weight: bolder
-.basket
-  display: flex
-  flex-direction: column
-  .uppPlate
-    margin: 0 0 10px 10px
+
+
+
 .rightContent
   display: flex
-  width: 500px
   justify-content: space-evenly
   align-items: center
   font-size: 20px
-  padding-left: 10px
-  .ActiveNavlink
-   color: white
+.navigationLinks
+  list-style: none
+  display: flex
+  flex-direction: row
+  justify-content: space-between
+  width: 450px
+  padding-right: 20px
   a
-    color: #67687a
-  //a:hover
-  //  transition: .4s
-  //  color: white
+    color: grey
+    font-family: Roboto, sans-serif
+    font-size: 23px
+.basket
+  display: flex
+  flex-direction: column
+  justify-content: space-around
+  align-items: center
+  width: 50px
+  height: 50px
+  .uppPlate
+    transform: rotate(-30deg)
+.burgerMenu
+  display: none
+
+
+
+
+
+
+
+
+
+
+
+
+@media screen and (max-width: 950px)
+  .leftContent
+    width: 290px
+  .logoLink
+    height: 55px
+    svg
+      width: 55px
+      height: 55px
+    p
+      margin: 0 10px
+      font-size: 16px
+  .choiceLang
+    width: 60px
+    .currentLang
+      font-size: 21px
+    .changeLang
+      font-size: 13px
+      p
+      svg
+        margin: 0 10px
+        width: 15px
+        height: 15px
+  .navigationLinks
+    display: none
+  .burgerMenu
+    display: flex
+    width: 50px
+    height: 50px
+    align-items: center
+    justify-content: center
+
+@media screen and (max-width: 500px)
+  .header
+    width: calc(100% - 20px)
+    padding: 0 10px
+  .leftContent
+    width: 300px
+    .logoLink
+      height: 55px
+      width: 140px
+      p
+        width: 80px
+        margin: 0
+        font-size: 15px
+  .choiceLang
+    flex-direction: column
+    justify-content: space-between
+    width: 40px
+    align-items: center
+    cursor: pointer
+    .currentLang
+      font-size: 18px
+    svg
+      transform: rotate(90deg)
+      margin: 0 10px
+      width: 13px
+      height: 13px
+    .changeLang
+      font-size: 12px
+      color: white

@@ -15,7 +15,7 @@ function App() {
     const [dbRefresh, dbRefreshHandler] = useState(0)
 
     useEffect(() => {
-        console.log('fetch worked')
+        // console.log('fetch worked')
         fetch('https://grandepizzeria-d237f.firebaseio.com/.json')
             .then(response => response.json())
             .then(
@@ -23,7 +23,7 @@ function App() {
                     dataHandler(json)
                 }
             )
-        console.log(data)
+        // console.log(data)
     }, [dbRefresh])
 
     const DBSetter = (path, value) => {
@@ -39,7 +39,7 @@ function App() {
     //     currentData.push(newObject)
     //     DBSetter('/newValues', currentData)
     // }
-    console.log(window.location.pathname)
+    // console.log(window.location.pathname)
 
     return (
         <div className="App">
